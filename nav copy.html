@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        #nav{
+            font-size: 5px !important;
+        }
+        #ham-icon{
+            position: absolute;
+            background-color: #F8F8F8;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.6rem;
+            transform: translate(20px,20px);
+            transition: transform 6s;
+            z-index: 10;
+        }
+        #li-one{
+            position: absolute;
+            background-color: red;
+            border-radius: 50%;
+            width: 0rem;
+            height: 0rem;
+            z-index: 9;
+            margin-top: 7rem;
+            margin-left: 7rem;
+            transition: all 1s;
+            transform:scale3d(10,10,10);
+            transform:rotate3d(0, 0, 1, 290deg);
+        }
+        #li-two{
+            position: absolute;
+            background-color: yellow;
+            border-radius: 50%;
+            width: 0rem;
+            height: 0rem;
+            z-index: 8;
+            margin-top: 7rem;
+            margin-left: 7rem;
+            transition: all 2s;
+            transform:scale3d(15,15,15);
+        }
+        #li-three{
+            position: absolute;
+            background-color: cyan;
+            border-radius: 50%;
+            width: 0rem;
+            height: 0rem;
+            z-index: 7;
+            margin-top: 7rem;
+            margin-left: 7rem;
+            transition: all 3s;
+            transform:scale3d(20,20,20);
+        }
+        #li-four{
+            position: absolute;
+            background-color: pink;
+            border-radius: 50%;
+            width: 0rem;
+            height: 0rem;
+            z-index: 6;
+            margin-top: 7rem;
+            margin-left: 7rem;
+            transition: all 4s;
+            transform:scale3d(25,25,25);
+        }
+        #li-five{
+            position: absolute;
+            background-color: blueviolet;
+            border-radius: 50%;
+            width: 0rem;
+            height: 0rem;
+            z-index: 5;
+            margin-top: 7rem;
+            margin-left: 7rem;
+            transition: all 5s;
+            transform:scale3d(30,30,30);
+        }
+        #li-six{
+            position: absolute;
+            background-color: green;
+            border-radius: 50%;
+            width: 0rem;
+            height: 0rem;
+            z-index: 4;
+            margin-top: 7rem;
+            margin-left: 7rem;
+            transition: all 6s;
+            transform:scale3d(35,35,35);
+        }
+        #ham-icon img{width: 70%;}
+    </style>
+    <script>
+        const openCloseMenu=()=>{
+            const imgSrc=document.getElementById("ham-icon-img").src;
+            if(imgSrc.endsWith("menu.png")){
+                document.getElementById("ham-icon-img").src="./images/cross.png";
+                document.getElementById("ham-icon").style.transform="translate(5rem,5rem)";
+                document.getElementById("li-one").style.width="1rem";
+                document.getElementById("li-one").style.height="1rem";
+                document.getElementById("li-two").style.width="1rem";
+                document.getElementById("li-two").style.height="1rem";
+                document.getElementById("li-three").style.width="1rem";
+                document.getElementById("li-three").style.height="1rem";
+                document.getElementById("li-four").style.width="1rem";
+                document.getElementById("li-four").style.height="1rem";
+                document.getElementById("li-five").style.width="1rem";
+                document.getElementById("li-five").style.height="1rem";
+                document.getElementById("li-six").style.width="1rem";
+                document.getElementById("li-six").style.height="1rem";
+            }
+            else if(imgSrc.endsWith("cross.png")){
+                document.getElementById("ham-icon-img").src="./images/menu.png";
+                document.getElementById("ham-icon").style.transform="translate(20px,20px)";
+                document.getElementById("li-one").style.width="0rem";
+                document.getElementById("li-one").style.height="0rem";
+                document.getElementById("li-two").style.width="0rem";
+                document.getElementById("li-two").style.height="0rem";
+                document.getElementById("li-three").style.width="0rem";
+                document.getElementById("li-three").style.height="0rem";
+                document.getElementById("li-four").style.width="0rem";
+                document.getElementById("li-four").style.height="0rem";
+                document.getElementById("li-five").style.width="0rem";
+                document.getElementById("li-five").style.height="0rem";
+                document.getElementById("li-six").style.width="0rem";
+                document.getElementById("li-six").style.height="0rem";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <div id="ham-icon" onclick="openCloseMenu()">
+            <img id="ham-icon-img" src="./images/menu.png">
+        </div>
+        <div id="li-two">bj</div>        
+        <div id="li-one">bj</div>        
+        <div id="li-three">bj</div>        
+        <div id="li-four">bj</div>        
+        <div id="li-five">bj</div>        
+        <div id="li-six">bj</div>        
+    </div>
+</body>
+</html>

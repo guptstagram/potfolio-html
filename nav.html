@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            top: -220px;
+            left: -220px;
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.5s;
+        }
+        .circle {
+            position: absolute;
+            text-align: center;
+            cursor: pointer;
+            padding-top: 10px;
+            opacity: 0;
+            transition: transform 0.5s, opacity 0.5s;
+            border-radius: 50%;
+        }
+        .circle div {
+            transform: rotate(180deg);
+        }
+        .open .circle {
+            opacity: 1;
+        }
+        #ham-icon{
+            background-color: #E5EFF8;
+            top: 250px;
+            left: 250px;
+            right: 250px;
+            bottom: 250px;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        #ham-icon:hover{
+            background-color:#F8F8F8;
+        }
+        #ham-icon img{
+            width: 40px;
+        }
+        .open #ham-icon {
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 130deg);
+        }
+        .m1 {
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: palevioletred;
+            transition-delay: 0s;
+        }
+        .open .m1 {
+            transition-delay: 0s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 130deg);
+            opacity: 1;
+        }
+        .open .m1:hover {
+            color: #ff6347;
+        }
+        .open .m1:active {
+            color: #ff6347;
+        }
+        .m2 {
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            background: pink;
+            transition-delay: 0.1s;
+        }
+        .open .m2 {
+            transition-delay: 0.1s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 130deg);
+            opacity: 1;
+        }
+        .open .m2:hover {
+            color: #ff6347;
+        }
+        .open .m2:active {
+            color: #ff6347;
+        }
+        .m3 {
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+            background: cyan;
+            transition-delay: 0.2s;
+        }
+        .open .m3 {
+            transition-delay: 0.2s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 130deg);
+            opacity: 1;
+        }
+        .open .m3:hover {
+            color: #ff6347;
+        }
+        .open .m3:active {
+            color: #ff6347;
+        }
+        .m4 {
+            top: 150px;
+            left: 150px;
+            right: 150px;
+            bottom: 150px;
+            background: greenyellow;
+            transition-delay: 0.3s;
+        }
+        .open .m4 {
+            transition-delay: 0.3s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 130deg);
+            opacity: 1;
+        }
+        .open .m4:hover {
+            color: #ff6347;
+        }
+        .open .m4:active {
+            color: #ff6347;
+        }
+        .m5 {
+            top: 200px;
+            left: 200px;
+            right: 200px;
+            bottom: 200px;
+            background: magenta;
+            transition-delay: 0.3s;
+        }
+        .open .m5 {
+            transition-delay: 0.3s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 130deg);
+            opacity: 1;
+        }
+        .open .m5:hover {
+            color: #ff6347;
+        }
+        .open .m5:active {
+            color: #ff6347;
+        }
+
+        @media only screen and (max-width: 450px) {
+
+            #nav{width: 350px;height: 350px;top:-120px;left: -120px;}
+
+            #ham-icon{top:150px;right: 150px;bottom: 150px;left: 150px;background-color: #E5EFF8;}
+
+            #ham-icon img{
+            width: 20px;
+        }
+            .m5{top:120px;right: 120px;bottom: 120px;left: 120px;}
+            .m4{top:90px;right: 90px;bottom: 90px;left: 90px;}
+            .m3{top:60px;right: 60px;bottom: 60px;left: 60px;}
+            .m2{top:30px;right: 30px;bottom: 30px;left: 30px;}
+            .m1{top:0px;right: 0px;bottom: 0px;left: 0px;}
+
+            }
+    </style>
+    <script>
+        const openCloseMenu=()=>{
+            document.querySelector("#nav").classList.toggle("open");
+            if (document.querySelector("#nav").classList.contains("open"))
+            {
+                document.getElementById("nav").style.transform="translate3d(50px, 50px, 0)";
+                document.getElementById("ham-icon-img").src="./images/cross.png";
+            }
+            else
+            {
+                document.getElementById("nav").style.transform="translate3d(0, 0, 0)";
+                document.getElementById("ham-icon-img").src="./images/menu.png";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <a class="circle m1" href="#">
+            <div>Contact</div>
+          </a>
+        <a class="circle m2" href="#">
+            <div>About</div>
+        </a>
+        <a class="circle m3" href="#">
+            <div>Experience</div>
+        </a>
+        <a class="circle m4" href="#">
+            <div>Skills</div>
+        </a>
+        <a class="circle m5" href="#">
+            <div>Home</div>
+        </a>      
+        <div id="ham-icon" class="circle" onclick="openCloseMenu()">
+            <img id="ham-icon-img" src="./images/menu.png">
+        </div> 
+    </div>
+</body>
+</html>

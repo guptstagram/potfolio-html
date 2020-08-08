@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #92B1AF;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 0.2rem;
+}
+#wrapper h1{font-size: 2.4rem !important;display: none;text-align: center;}
+#wrapper h2{font-size: 2.4rem !important;display: none;text-align: center;}

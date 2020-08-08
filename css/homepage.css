@@ -1,0 +1,85 @@
+*{margin: 0;padding: 0;}
+
+.hello-text-big-font{font-size: 15rem;}
+.hello-text-blue-dot{color: #E5EFF8;transition: color 1s;}
+
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    position: fixed;
+    box-sizing: border-box;
+}
+
+#hello-section-grey{
+    width: 100%;
+    height: 100%;
+    background-color: #F8F8F8;
+}
+
+#hello-section-blue-half{
+    width: 50%;
+    background-color: #E5EFF8;
+    height: 100%;
+    transition:width 1s;
+}
+
+#hello-text-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: absolute;
+    left: 0;
+    transition: left 1s;
+}
+
+#intro-text-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+.intro-text-name-font span:hover{
+    color: tomato;
+    animation: abc linear .5s;
+}
+
+@keyframes abc{
+    0% { 
+        font-size: 7rem;
+        transform: scale(1, 1); 
+        color: red;
+    } 
+    25% { 
+        font-size: 3rem;
+        transform: scale(0.1, 0.1); 
+        color: green;
+    } 
+
+    50% { 
+        font-size: 8rem;
+        transform: scale(0.5, 0.5); 
+        color: greenyellow;
+    } 
+    100% { 
+        font-size: 7rem;
+        transform: scale(1, 1); 
+    } 
+}
+
+.intro-text-name-font{font-size: 7rem;}
+.intro-text-developer-font{font-size: 3.8rem;}
+.intro-text-apps-font{font-size: 2.9rem;}
+
+.intro-text-quote-font{text-align: center;padding-top: 50px;}
+
+
