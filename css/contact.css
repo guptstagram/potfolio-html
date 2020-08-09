@@ -14,36 +14,76 @@
     height:100%;
     background-color: #E5EFF8;
     display: flex;
-}
-
-#contact{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#form{
-    width: 70%;
+#contact{
+    width: 65%;
+    height: 500px;
+    display: flex;
+    background-color: #F8F8F8;
+    padding: 20px;
+    box-shadow: 0 0 15px 0 rgba(47, 48, 50, 0.15);
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-section{
+    flex: 0.5;
+}
+
+.form-section form{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.form-section form p{
+    
+}
+
+.svg-section{
+    flex: 0.4;
+}
+
+.svg-section img{
+    height: 100%;
+    width: 100%;
 }
 
 input{
-    width: 100%;
-    font-size: 0.8rem;
-    padding: 15px;
-    background: transparent;
-    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 2px #f5bbbf;
+    background-color: #F8F8F8;
 }
+
+input:focus{
+    outline:none;
+}
+
 textarea{
-    width: 100%;
-    font-size: 0.8rem;
-    padding: 15px;
-    background: transparent;
-    box-sizing: border-box;
-    height: 150px;
+    height: 160px;
+    border-radius: 5px;
+    border: solid 2px #f5bbbf;
+    background-color: #F8F8F8;
+    resize: none;
 }
+
+
+/* --------------- MEDIA QUERY -------------- */
+
+@media only screen and (max-width: 992px) {
+    #contact{
+        height:450px;
+    }
+    .svg-section{
+        display:none;
+    }
+    .form-section{
+        flex: 1;
+    }
+}
+
