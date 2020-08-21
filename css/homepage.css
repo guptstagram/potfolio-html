@@ -80,6 +80,11 @@
 .intro-text-developer-font{font-size: 3.8rem;}
 .intro-text-apps-font{font-size: 2.9rem;}
 
+.after-danda:after {
+    content: "|";
+    /* content: "।"; */
+}
+
 .intro-text-quote-font{text-align: center;padding-top: 50px;}
 
 
