@@ -83,6 +83,13 @@
 .after-danda:after {
     content: "|";
     /* content: "।"; */
+    opacity: 50%;
+    animation: blink-danda 0.8s linear infinite;
+}
+@keyframes blink-danda{
+    50%{
+        opacity: 0;
+    }
 }
 
 .intro-text-quote-font{text-align: center;padding-top: 50px;}
