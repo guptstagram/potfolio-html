@@ -24,3 +24,23 @@
     bottom: 10px;
     right: 10px;
 }
+
+.contact{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact input{
+    padding:10px;
+    font-family: openSansFont;
+    font-size: 1rem;
+    line-height: 1.88;
+    color: #E5EFF8;
+}
+.contact textarea{
+    padding:10px;
+    font-family: openSansFont;
+    font-size: 1rem;
+    line-height: 1.88;
+    color: #E5EFF8;
+}
