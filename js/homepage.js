@@ -7,7 +7,7 @@ const increaseBlueColorWidth = () => {
 
 const movingHelloText = () => {
   setTimeout(() => {
-    document.getElementById("hello-text-box").style.left = "110%";
+    document.getElementById("hello-text-box").style.left = "180%";
   }, 2000);
 };
 
