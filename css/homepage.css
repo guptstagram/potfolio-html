@@ -46,39 +46,66 @@
     flex-direction: column;
     opacity: 1;
     font-family: 'Lexend Giga', sans-serif;
+    background: url("../images/undraw_on_the_office_fbfs.svg");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* animation: glow 0.01s ease-in-out infinite alternate; */
 }
 
-.intro-text-name-font span:hover{
-    color: tomato;
-    animation: abc linear .5s;
+@keyframes glow {
+    from {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #E5EFF8, 0 0 4px #E5EFF8, 0 0 5px #E5EFF8, 0 0 6px #E5EFF8, 0 0 7px #E5EFF8;
+    }
+    to {
+        text-shadow: 0 0 2px #fff, 0 0 3px #F8F8F8, 0 0 4px #F8F8F8, 0 0 5px #F8F8F8, 0 0 6px #F8F8F8, 0 0 7px #F8F8F8, 0 0 8px #F8F8F8;
+    }
 }
 
-@keyframes abc{
-    0% { 
-        font-size: 7rem;
-        transform: scale(1, 1); 
-        color: red;
-    } 
-    25% { 
-        font-size: 3rem;
-        transform: scale(0.1, 0.1); 
-        color: green;
-    } 
-
-    50% { 
-        font-size: 8rem;
-        transform: scale(0.5, 0.5); 
-        color: greenyellow;
-    } 
-    100% { 
-        font-size: 7rem;
-        transform: scale(1, 1); 
-    } 
+.text-effect{
+    color: #ed4457;
+    animation: textEffect ease-out 0.8s;
 }
 
-.intro-text-name-font{font-size: 7rem;}
-.intro-text-developer-font{font-size: 3.8rem;}
-.intro-text-apps-font{font-size: 2.9rem;}
+@keyframes textEffect{
+    0%{
+        transform: scale(0.4);
+    }
+    10%{
+        transform: scale(0.4);
+    }
+    20%{
+        transform: scale(0.4);
+    }
+    30%{
+        transform: scale(0.6);
+    }
+    40%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.7);
+    }
+    60%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(0.8);
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.intro-text-name-font{font-size: 7rem;animation: glow 0.01s ease-in-out infinite alternate;}
+.intro-text-developer-font{font-size: 3.8rem;animation: glow 0.01s ease-in-out infinite alternate;}
+.intro-text-apps-font{font-size: 2.9rem;animation: glow 0.01s ease-in-out infinite alternate;}
 
 .after-danda:after {
     content: "|";
@@ -92,11 +119,21 @@
     }
 }
 
-.intro-text-quote-font{text-align: center;padding-top: 50px;}
+.intro-text-quote-font{text-align: center;padding-top: 50px;font-weight: bold;}
 
 
 /* --------------- MEDIA QUERY -------------- */
+@media only screen and (min-width: 1025px) {
+    .intro-text-name-font span{
+        display: inline-block;
+    }
+}
 
+@media only screen and (max-width: 1024px) {
+    #intro-text-box{
+        background-size: 80%;
+    }
+}
 @media only screen and (max-width: 992px) {
     .intro-text-name-font{font-size: 5rem;}
     .intro-text-developer-font{font-size: 2.7rem;}
@@ -121,5 +158,8 @@
     .intro-text-name-font{font-size: 3rem;}
     .intro-text-developer-font{font-size: 1.6rem;}
     .intro-text-apps-font{font-size: 1.2rem;}
+    #intro-text-box{
+        background-size: 60%;
+    }
 }
 

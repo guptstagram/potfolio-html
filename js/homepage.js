@@ -11,6 +11,11 @@ const movingHelloText = () => {
   }, 2000);
 };
 
+const addTextEffect=(target)=>{
+  target.classList.add("text-effect");
+  setTimeout(()=>target.classList.remove("text-effect"),800)
+}
+
 // window.getComputedStyle( document.querySelector('.intro-text-name-font'), '::after' ).getPropertyValue("display")
 
 const increasingVisibilityofIntroText = () => {
@@ -25,7 +30,11 @@ const increasingVisibilityofIntroText = () => {
   }, currTime);
   for(let i=0;i<line1.length;i++){
     setTimeout(() => {
-      document.querySelector(".intro-text-name-font").innerHTML+="<span>"+line1[i]+"</span>";
+      let span=document.createElement("span");
+      span.innerText=line1[i];
+      span.addEventListener("mouseover",()=>addTextEffect(span));
+      document.querySelector(".intro-text-name-font").appendChild(span);
+      // document.querySelector(".intro-text-name-font").innerHTML+="<span onmouseover='addTextEffect(this)'>"+line1[i]+"</span>";
     }, currTime+=80);
   }
   setTimeout(() => {
