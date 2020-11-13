@@ -34,6 +34,19 @@
     justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
+    background: url("../images/undraw_set_preferences_kwia.svg");
+    background-size: 90% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: glow 0.01s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #E5EFF8, 0 0 4px #E5EFF8, 0 0 5px #E5EFF8, 0 0 6px #E5EFF8, 0 0 7px #E5EFF8;
+    }
+    to {
+        text-shadow: 0 0 2px #fff, 0 0 3px #F8F8F8, 0 0 4px #F8F8F8, 0 0 5px #F8F8F8, 0 0 6px #F8F8F8, 0 0 7px #F8F8F8, 0 0 8px #F8F8F8;
+    }
 }
 #about-text h1{
     font-family: 'Lexend Peta', sans-serif;
@@ -73,12 +86,13 @@
     background-color: #f8f8f8;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .resume-button button:hover{
     background-color: #f5bbbf;
     border:2px solid #f8f8f8;
     color: #E5EFF8;
+    box-shadow: 0 0 15px 0 rgba(47, 48, 50, 0.15);
 }
 .resume-button button:focus{
     outline: none;

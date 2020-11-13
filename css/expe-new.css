@@ -23,6 +23,10 @@
     align-items: center;
     padding: 2rem;
     text-align: center;
+    background: url("../images/undraw_product_teardown_elol.svg");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .exp-box p{
@@ -31,6 +35,16 @@
     font-weight: bold;
     line-height: 1.88;
     font-size: 20px;
+    animation: glow 0.1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #E5EFF8, 0 0 4px #E5EFF8, 0 0 5px #E5EFF8, 0 0 6px #E5EFF8, 0 0 7px #E5EFF8;
+    }
+    to {
+        text-shadow: 0 0 2px #fff, 0 0 3px #F8F8F8, 0 0 4px #F8F8F8, 0 0 5px #F8F8F8, 0 0 6px #F8F8F8, 0 0 7px #F8F8F8, 0 0 8px #F8F8F8;
+    }
 }
 
 .red-text{
